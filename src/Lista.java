@@ -4,9 +4,13 @@ public class Lista {
 
 
     private double[] list;
+    private double[] listBackup;
+
+
 
     public Lista(int lenght){
         this.list = new double[lenght];
+        this.listBackup = new double[lenght];
     }
 
     public void add(double value){
@@ -33,6 +37,8 @@ public class Lista {
     }
 
     public void cleanList(){
+        list = listBackup;
+
         counter = 0;
     }
 
